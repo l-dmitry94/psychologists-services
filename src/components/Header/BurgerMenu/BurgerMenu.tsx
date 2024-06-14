@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 
 import Navigation from '../Navigation';
@@ -11,6 +11,12 @@ import scss from './BurgerMenu.module.scss';
 
 const BurgerMenu = () => {
     const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
+
+    useEffect(() => {
+        if (menuIsOpen) {
+            document.body.style.overflow = 'hidden';
+        } else document.body.style.overflow = 'visible';
+    }, [menuIsOpen]);
 
     return (
         <div className={scss.burgerMenu}>
