@@ -1,0 +1,55 @@
+@import 'styles/mixins';
+
+.navigationList {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include media-rules(desktop) {
+        flex-direction: row;
+    }
+}
+
+.navigationLink {
+    position: relative;
+    font-size: 18px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--gray);
+
+    &:global(.active) {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -24px;
+            transform: translateY(-30%);
+            width: 8px;
+            height: 8px;
+            background-color: var(--gray);
+            border-radius: 50%;
+            animation: moveX 0.8s infinite alternate;
+
+            @include media-rules(desktop) {
+                top: calc((100% + 4px));
+                right: 50%;
+                transform: translateX(-50%);
+                background-color: var(--green);
+            }
+        }
+    }
+
+    @include media-rules(desktop) {
+        font-size: 16px;
+        color: var(--black);
+    }
+}
+
+@keyframes moveX {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+}

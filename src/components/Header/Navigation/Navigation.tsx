@@ -1,17 +1,23 @@
 import { FC } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { INavigation } from './Navigation.types';
 
 import scss from './Navigation.module.scss';
 
-const Navigation: FC<INavigation> = ({ navigationItems }) => {
+const Navigation: FC<INavigation> = ({ navigationItems, closeBurgerMenu }) => {
     return (
         <nav>
             <ul className={scss.navigationList}>
                 {navigationItems.map(({ label, href }) => (
                     <li key={label} className={scss.navigationItem}>
-                        <Link to={href}>{label}</Link>
+                        <NavLink
+                            to={href}
+                            onClick={closeBurgerMenu}
+                            className={scss.navigationLink}
+                        >
+                            {label}
+                        </NavLink>
                     </li>
                 ))}
             </ul>

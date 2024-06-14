@@ -5,4 +5,5 @@ interface INavigationItem {
 
 export interface INavigation {
     navigationItems: INavigationItem[];
+    closeBurgerMenu?: () => void;
 }

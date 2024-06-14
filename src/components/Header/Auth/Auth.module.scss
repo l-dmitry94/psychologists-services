@@ -1,0 +1,11 @@
+@import "styles/mixins";
+
+.authList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include media-rules(desktop) {
+        flex-direction: row;
+    }
+}
