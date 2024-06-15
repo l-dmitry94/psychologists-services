@@ -1,7 +1,10 @@
 import { hero_1x, hero_2x } from 'assets/images/hero';
 
-import scss from './HeroImage.module.scss';
 import { icons } from 'assets/icons';
+
+import HeroIcons, { Icon } from '../HeroIcons';
+
+import scss from './HeroImage.module.scss';
 
 const HeroImage = () => {
     return (
@@ -13,17 +16,8 @@ const HeroImage = () => {
                 className={scss.image}
             />
 
-            <div className={scss.usersWrapper}>
-                <svg className={scss.usersIcon}>
-                    <use href={`${icons}#icon-users`}></use>
-                </svg>
-            </div>
-
-            <div className={scss.questionWrapper}>
-                <svg className={scss.questionIcon}>
-                    <use href={`${icons}#icon-question`}></use>
-                </svg>
-            </div>
+            <HeroIcons icon={Icon.Users} />
+            <HeroIcons icon={Icon.Question} />
 
             <div className={scss.imageLabel}>
                 <div className={scss.checkWrapper}>

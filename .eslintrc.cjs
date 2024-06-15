@@ -14,7 +14,7 @@ module.exports = {
     ignorePatterns: ['dist', '.eslintrc.cjs'],
     parser: '@typescript-eslint/parser',
     settings: { react: { version: '18.2' } },
-    plugins: ['react-refresh'],
+    plugins: ['react-refresh', '@typescript-eslint', 'react'],
     rules: {
         'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
         'prettier/prettier': [
@@ -23,5 +23,6 @@ module.exports = {
                 endOfLine: 'auto',
             },
         ],
+        '@typescript-eslint/no-unused-vars': ['error', { 'varsIgnorePattern': '^Icon$' }]
     },
 };

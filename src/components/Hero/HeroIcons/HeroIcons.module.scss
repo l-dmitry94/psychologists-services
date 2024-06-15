@@ -1,0 +1,49 @@
+@import 'styles/mixins';
+
+.wrapperIcon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    animation: rotateRight .8s infinite alternate linear;
+}
+
+.usersWrapper {
+    top: 38px;
+    right: -10px;
+    background-color: #fbc75e;
+
+    @include media-rules(desktop) {
+        right: -36px;
+    }
+}
+
+.questionWrapper {
+    top: 50%;
+    left: -10px;
+    background-color: #4535af;
+
+    @include media-rules(tablet) {
+        top: 185px;
+        left: -39px;
+    }
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--gray);
+}
+
+@keyframes rotateRight {
+    0% {
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        transform: rotate(15deg);
+    }
+}
