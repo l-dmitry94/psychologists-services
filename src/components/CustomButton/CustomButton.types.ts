@@ -2,7 +2,6 @@
 export enum Button {
     Login = 'authLogin',
     Register = 'authRegister',
-    Started = 'getStarted',
     ModalAuth = 'modalAuth',
     LoadMore = 'loadMore',
     MakeAppointment = 'makeAppointment',

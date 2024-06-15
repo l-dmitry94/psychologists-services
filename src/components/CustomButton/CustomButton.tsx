@@ -12,7 +12,6 @@ const CustomButton: FC<ICustomButton> = ({ button, label }) => {
                 scss.button,
                 button === Button.Login && scss.authLogin,
                 button === Button.Register && scss.authRegister,
-                button === Button.Started && scss.getStarted,
                 button === Button.LoadMore && scss.loadMore,
                 button === Button.MakeAppointment && scss.makeAppointment,
                 button === Button.ModalAuth && scss.modalAuth

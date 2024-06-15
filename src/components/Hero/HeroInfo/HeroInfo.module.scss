@@ -1,0 +1,95 @@
+@import 'styles/mixins';
+
+.info {
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+
+    @include media-rules(tablet) {
+        max-width: 368px;
+        text-align: left;
+        margin: 0;
+    }
+
+    @include media-rules(desktop) {
+        max-width: 595px;
+    }
+}
+
+.infoTitle {
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-bottom: 20px;
+
+    &Color {
+        font-style: italic;
+        color: var(--green);
+    }
+
+    @include media-rules(mobile) {
+        font-size: 44px;
+    }
+
+    @include media-rules(tablet) {
+        font-size: 38px;
+        text-align: left;
+    }
+
+    @include media-rules(desktop) {
+        font-size: 80px;
+    }
+}
+
+.infoDescription {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.33;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @include media-rules(tablet) {
+        text-align: left;
+    }
+
+    @include media-rules(desktop) {
+        font-size: 18px;
+        max-width: 510px;
+    }
+}
+
+.infoLink {
+    display: inline-flex;
+    gap: 18px;
+    background-color: var(--green);
+    border-radius: 30px;
+    @include transition(background-color, transform);
+    padding: 18px 50px;
+
+    &:is(:hover, :focus) {
+        background-color: var(--dark-green);
+        transform: translateY(-4px);
+
+        & .infoLinkIcon {
+            transform: rotate(53deg);
+        }
+    }
+}
+
+.infoLinkText {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--gray);
+}
+
+.infoLinkIcon {
+    width: 18px;
+    height: 18px;
+    fill: var(--gray);
+    @include transition(transform);
+}

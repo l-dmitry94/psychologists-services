@@ -1,0 +1,122 @@
+@import 'styles/mixins';
+
+.imageWrapper {
+    position: relative;
+    display: inline-flex;
+}
+
+.image {
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.usersWrapper {
+    position: absolute;
+    top: 38px;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #fbc75e;
+    border-radius: 10px;
+    transform: rotate(15deg);
+
+    animation: rotateRight .8s infinite alternate linear;
+
+    @include media-rules(desktop) {
+        right: -36px;
+    }
+}
+
+.usersIcon {
+    width: 20px;
+    height: 20px;
+    fill: var(--gray);
+}
+
+.questionWrapper {
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #4535af;
+    border-radius: 10px;
+    transform: rotate(-15deg);
+    animation: rotateRight .8s infinite alternate linear;
+
+    @include media-rules(tablet) {
+        top: 185px;
+        left: -39px;
+    }
+}
+
+.questionIcon {
+    width: 20px;
+    height: 20px;
+    fill: var(--gray);
+}
+
+.imageLabel {
+    position: absolute;
+    bottom: 10%;
+    left: -10px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--green);
+    border-radius: 20px;
+    padding: 14px;
+
+    @include media-rules(desktop) {
+        left: -101px;
+        bottom: 75px;
+        padding: 32px;
+    }
+}
+
+.checkWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    background-color: var(--gray);
+    border-radius: 13px;
+}
+
+.labelText {
+    font-size: 12px;
+    color: rgba(251, 251, 251, 0.5);
+    margin-bottom: 8px;
+
+    @include media-rules(desktop) {
+        font-size: 14px;
+    }
+}
+
+.labelNumber {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--gray);
+
+    @include media-rules(desktop) {
+        font-size: 24px;
+    }
+}
+
+@keyframes rotateRight {
+    0% {
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        transform: rotate(15deg);
+    }
+}
