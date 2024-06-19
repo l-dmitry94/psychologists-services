@@ -4,8 +4,6 @@ import Modal from 'components/Modal';
 
 import { IAuth } from '../Auth.types';
 
-import scss from './Login.module.scss';
-
 const Login: FC<IAuth> = ({ isOpen, closeModal }) => {
     return (
         <Modal

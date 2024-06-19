@@ -5,11 +5,10 @@ import { IModal } from './Modal.types';
 
 import scss from './Modal.module.scss';
 import { icons } from 'assets/icons';
-import CustomButton, { Button } from 'components/CustomButton';
 
 ReactModal.setAppElement('#root');
 
-const Modal: FC<IModal> = ({ modalIsOpen, closeModal, title, description, label, children }) => {
+const Modal: FC<IModal> = ({ modalIsOpen, closeModal, title, description, children }) => {
     useEffect(() => {
         if (modalIsOpen) {
             document.body.style.overflow = 'hidden';
