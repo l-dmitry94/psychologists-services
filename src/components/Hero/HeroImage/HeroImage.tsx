@@ -1,8 +1,7 @@
-import { hero_1x, hero_2x } from 'assets/images/hero';
-
-import { icons } from 'assets/icons';
-
 import HeroIcons, { Icon } from '../HeroIcons';
+
+import { hero_1x, hero_2x } from 'assets/images/hero';
+import { icons } from 'assets/icons';
 
 import scss from './HeroImage.module.scss';
 

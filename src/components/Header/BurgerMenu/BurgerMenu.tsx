@@ -20,10 +20,7 @@ const BurgerMenu = () => {
 
     return (
         <div className={scss.burgerMenu}>
-            <button
-                onClick={() => setMenuIsOpen(!menuIsOpen)}
-                className={scss.burgerButton}
-            >
+            <button onClick={() => setMenuIsOpen(!menuIsOpen)} className={scss.burgerButton}>
                 <svg className={scss.burgerIcon}>
                     <use href={`${icons}#icon-burger`}></use>
                 </svg>
@@ -34,10 +31,7 @@ const BurgerMenu = () => {
                 className={clsx(scss.menu, menuIsOpen && scss.active)}
             >
                 <div className={scss.blur}></div>
-                <div
-                    onClick={(e) => e.stopPropagation()}
-                    className={scss.menuContent}
-                >
+                <div onClick={(e) => e.stopPropagation()} className={scss.menuContent}>
                     <Navigation
                         navigationItems={navigation}
                         closeBurgerMenu={() => setMenuIsOpen(false)}

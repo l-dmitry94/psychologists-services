@@ -17,9 +17,7 @@ const Header = () => {
                 <div className={scss.wrapper}>
                     <div className={scss.leftWrapper}>
                         <Logo />
-                        {isDesktop && (
-                            <Navigation navigationItems={navigation} />
-                        )}
+                        {isDesktop && <Navigation navigationItems={navigation} />}
                     </div>
                     <div className={scss.rightWrapper}>
                         {isDesktop && <Auth />}

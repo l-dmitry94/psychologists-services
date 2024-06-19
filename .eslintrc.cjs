@@ -23,6 +23,7 @@ module.exports = {
                 endOfLine: 'auto',
             },
         ],
-        '@typescript-eslint/no-unused-vars': ['error', { 'varsIgnorePattern': '^Icon$' }]
+        '@typescript-eslint/no-unused-vars': ['error', { 'varsIgnorePattern': '^Icon$' }],
+        "@typescript-eslint/no-explicit-any": "off"
     },
 };

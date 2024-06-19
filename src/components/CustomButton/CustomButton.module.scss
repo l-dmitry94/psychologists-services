@@ -9,6 +9,7 @@
     color: var(--gray);
     border-radius: 30px;
     background-color: var(--green);
+    outline: transparent;
     @include transition(background-color, color);
     padding: 0 40px;
 

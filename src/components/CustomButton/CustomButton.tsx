@@ -5,9 +5,10 @@ import { Button, ICustomButton } from './CustomButton.types';
 
 import scss from './CustomButton.module.scss';
 
-const CustomButton: FC<ICustomButton> = ({ button, label }) => {
+const CustomButton: FC<ICustomButton> = ({ button, label, type }) => {
     return (
         <button
+            type={type}
             className={clsx(
                 scss.button,
                 button === Button.Login && scss.authLogin,

@@ -1,0 +1,61 @@
+@import 'styles/mixins';
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(25, 26, 21, 0.6);
+    overflow: hidden;
+    overflow-y: auto;
+    z-index: 999;
+    opacity: 0;
+    @include transition(opacity);
+    padding: 20px;
+}
+
+.content {
+    position: relative;
+    transform: translateY(50px);
+    max-width: 566px;
+    width: 100%;
+    outline: transparent;
+    background-color: var(--gray);
+    border-radius: 30px;
+    @include transition(transform);
+    padding: 64px;
+}
+
+.closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.closeIcon {
+    width: 32px;
+    height: 32px;
+    stroke: var(--black);
+}
+
+.modalInfo {
+    margin-bottom: 40px;
+}
+
+.modalTitle {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+}
+
+.modalDescription {
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(25, 26, 21, 0.5);
+}

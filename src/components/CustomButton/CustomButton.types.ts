@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 export enum Button {
     Login = 'authLogin',
     Register = 'authRegister',
@@ -10,4 +9,5 @@ export enum Button {
 export interface ICustomButton {
     button: Button;
     label: string;
+    type: 'button' | 'submit' | 'reset' | undefined;
 }

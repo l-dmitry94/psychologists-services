@@ -1,8 +1,8 @@
 import Container from 'components/Container';
-
-import scss from './Hero.module.scss';
 import HeroInfo from './HeroInfo';
 import HeroImage from './HeroImage';
+
+import scss from './Hero.module.scss';
 
 const Hero = () => {
     return (
